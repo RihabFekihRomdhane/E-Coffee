@@ -14,7 +14,7 @@ namespace eCoffee.web
         {
             var builder = new ContainerBuilder();
             builder.RegisterControllers(typeof(MvcApplication).Assembly);
-            builder.RegisterType<RecipeData>()
+            builder.RegisterType<RecipeDataInMemory>()
                    .As<IRecipeData>()
                    .InstancePerRequest();
             builder.RegisterType<ECoffeeDbContext>()

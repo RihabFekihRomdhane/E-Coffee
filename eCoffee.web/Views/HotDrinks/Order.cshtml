@@ -1,0 +1,33 @@
+﻿@model eCoffee.web.Models.OrderViewModel
+
+@{
+    ViewBag.Title = "Commander";
+}
+
+<h2>Votre commande</h2>
+
+<div>
+    <hr />
+    <h4>@Html.DisplayFor(model => model.Product.Name)</h4>
+    <dl class="dl-horizontal">
+        <dt>
+            @Html.DisplayNameFor(model => model.Product.Name)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.Product.Name)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.Price)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.Price)
+        </dd>
+
+    </dl>
+</div>
+<p>
+    @Html.ActionLink("Liste des boissons", "Index")
+</p>
